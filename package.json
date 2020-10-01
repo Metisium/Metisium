@@ -1,0 +1,38 @@
+{
+  "name": "myhomehub",
+  "version": "0.0.1",
+  "description": "A Hub software for connecting and implementing simple and advanced automation task to update your life",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "check": "nsp audit-package",
+    "start": "node src/server.js",
+    "web-dev": "browser-sync start --server --files \"src/public/*/*.*\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RobinRS/MyHomeHub-Server.git"
+  },
+  "keywords": [
+    "hub",
+    "smarthome",
+    "automatisation"
+  ],
+  "author": "Robin Schleser",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RobinRS/MyHomeHub-Server/issues"
+  },
+  "homepage": "https://github.com/RobinRS/MyHomeHub-Server#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^4.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "node-2fa": "^1.1.2",
+    "socket.io": "^2.3.0",
+    "winston": "^3.3.3",
+    "winston-daily-rotate-file": "^4.5.0"
+  }
+}
