@@ -1,6 +1,6 @@
-var express = require('express');
-var bodyParser = require('body-parser');
-var router = express.Router();
+const express = require('express');
+const bodyParser = require('body-parser');
+const router = express.Router();
 
 router.use(bodyParser.urlencoded({ extended: false }));
 router.use(require('./../middleware/logger'));

@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "check": "nsp audit-package",
-    "start": "node src/server.js",
+    "start": "nodemon src/server.js",
     "web-dev": "browser-sync start --server --files \"src/public/*/*.*\""
   },
   "repository": {
@@ -26,11 +26,14 @@
   "homepage": "https://github.com/RobinRS/MyHomeHub-Server#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "config": "^3.3.2",
     "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
     "express": "^4.17.1",
     "helmet": "^4.1.1",
     "jsonwebtoken": "^8.5.1",
     "node-2fa": "^1.1.2",
+    "nodemon": "^2.0.4",
     "socket.io": "^2.3.0",
     "winston": "^3.3.3",
     "winston-daily-rotate-file": "^4.5.0"
