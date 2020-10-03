@@ -7,21 +7,17 @@ router.use(bodyParser.urlencoded({ extended: false }))
 router.use(bodyParser.json())
 
 router.post('/login', function(req, res) {
-  const user = { name: req.body.name, id: 0, role: ['admin'] };
+  const user = { name: req.body.username, id: 0, role: 'Administrator', roles: ['administrator'] };
   security.generateJwt(user, (token, err) => {
     if (err) throw Error('Error while generating jwt token for user ' + user);
-    res.status(201)
-    .cookie('access_token', 'Bearer ' + token, {
-      expires: new Date(Date.now() + 2 * 24 * 3600000),
-      signed: true,
-      sameSite: true,
-    })
-    .redirect(301, '/admin');
+    res.cookie('token', token, { expires: new Date(Date.now() + 2 * 24 * 3600000), sameSite: true });
+    res.redirect('/');
   })
 });
 
-router.post('/logout', function(req, res) {
-  res.send('');
+router.get('/logout', function(req, res) {
+  res.clearCookie("token");
+  res.redirect('/login');
 });
 
 router.get('/about', function(req, res) {
