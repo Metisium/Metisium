@@ -1,7 +1,7 @@
 {
-  "name": "myhomehub",
+  "name": "metisium-core",
   "version": "0.0.1",
-  "description": "A Hub software for connecting and implementing simple and advanced automation task to update your life",
+  "description": "A Hub software for connecting and implementing simple and advanced automation tasks",
   "main": "src/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RobinRS/MyHomeHub-Server.git"
+    "url": "git+https://github.com/Metisium/Metisium"
   },
   "keywords": [
     "hub",
@@ -21,9 +21,9 @@
   "author": "Robin Schleser",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/RobinRS/MyHomeHub-Server/issues"
+    "url": "https://github.com/Metisium/Metisium/issues"
   },
-  "homepage": "https://github.com/RobinRS/MyHomeHub-Server#readme",
+  "homepage": "https://github.com/Metisium/Metisium#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
     "config": "^3.3.2",
