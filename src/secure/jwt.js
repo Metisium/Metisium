@@ -29,8 +29,8 @@ const secure = (app) => {
   app.use(helmet());
 }
 
-const checkJwt = (jwt, cb) => {
-  jwt.verify(jwt, publicKey, function(err, decoded) {
+const checkJwt = (jwtToken, cb) => {
+  jwt.verify(jwtToken, publicKey, function(err, decoded) {
     cb(decoded, err);
   });
 }

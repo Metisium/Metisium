@@ -2,6 +2,9 @@ const fs = require('fs');
 const express = require('express');
 const router = express.Router();
 
+const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
+
 const addonList = [];
 
 const loadAddons = (logger) => {
@@ -24,6 +27,10 @@ const loadAddons = (logger) => {
       if(addon.appData().hasWebAssets) {
         router.use('/pub' + addonList[i].name, express.static(addonList[i].path + 'public'));
       }
+      router.use(cookieParser());
+      router.use(bodyParser.urlencoded({ extended: false }));
+      router.use(bodyParser.json());
+      
 
       if(addon.appData().requestForMainPage && !dashboardSet) {
         router.use("/", addon.router);
